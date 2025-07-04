@@ -15,5 +15,5 @@ jobs:
       - name: Instalar Docker
         uses: docker-practice/actions-setup-docker@master
 
-      - name: Levantar Prometheus + Grafana
-        run: docker-compose up -d
+      - name: Levantar Prometheus y Grafana
+        run: docker compose up -d
