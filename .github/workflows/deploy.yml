@@ -1,0 +1,19 @@
+name: Simple Automation
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  run-project:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar repositorio
+        uses: actions/checkout@v3
+
+      - name: Instalar Docker
+        uses: docker-practice/actions-setup-docker@master
+
+      - name: Levantar Prometheus + Grafana
+        run: docker-compose up -d
